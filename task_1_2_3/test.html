@@ -1,0 +1,114 @@
+<!-- task_1_2_3.html -->
+
+<!-- 任务描述
+参考以下示例代码，读取页面上已有的source列表，从中提取出城市以及对应的空气质量
+将数据按照某种顺序排序后，在resort列表中按照顺序显示出来 -->
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+  </head>
+<body>
+
+  <ul id="source">
+    <li>北京空气质量：<b>90</b></li>
+    <li>上海空气质量：<b>70</b></li>
+    <li>天津空气质量：<b>80</b></li>
+    <li>广州空气质量：<b>50</b></li>
+    <li>深圳空气质量：<b>40</b></li>
+    <li>福州空气质量：<b>32</b></li>
+    <li>成都空气质量：<b>90</b></li>
+  </ul>
+
+  <ul id="resort">
+    <!-- 
+    <li>第一名：北京空气质量：<b>90</b></li>
+    <li>第二名：北京空气质量：<b>90</b></li>
+    <li>第三名：北京空气质量：<b>90</b></li>
+     -->
+
+  </ul>
+
+  <button id="sort-btn" onclick="getData()">排序</button>
+
+<script type="text/javascript">
+
+/**
+ * getData方法
+ * 读取id为source的列表，获取其中城市名字及城市对应的空气质量
+ * 返回一个数组，格式见函数中示例
+ */
+function getData() {
+  /*
+  coding here
+  */
+
+  var str = document.getElementById('source').innerText;
+  var arrUl = document.getElementsByTagName("li");
+  // console.log(arr.length);
+  var arrLi,arruul;
+  var j = 0;
+  var arrB = new Array(arrUl.length);
+  for (var i = 0; i < arrB.length; i++) {
+    arrB[i] = new Array(2);
+  }
+
+
+  for (var i = 0; i < arrUl.length; i++) {
+    arruul = document.getElementsByTagName("li")[i];
+    arrLi = document.getElementsByTagName("b")[i];
+    // arrLii[i] = arrUl.innerText;
+    arrB[i][0] = arrLi.innerText;
+    arrB[i][1] = arruul.innerText;
+  }
+
+  Sort(arrB);
+
+  // console.log(arrB);
+  for (var i = 0; i < arrB.length; i++) {
+      j++
+      var li = document.createElement("li");
+      var node = document.createTextNode("第" + j + "名：" + arrB[i][1]);
+      li.appendChild(node);
+
+      var element = document.getElementById("resort");
+      element.appendChild(li);
+  }
+
+  var a = [
+        {'city': '北京', 'value': 90},
+        {'city': '天津', 'value': 70},
+        {'city': '上海', 'value': 80},
+        {'city': '南京', 'value': 60},
+  ];
+
+  a.sort(function (a, b) {
+        return a['value'] < b['value'];
+  });
+
+  console.log(a);
+
+
+}
+
+function Sort(arrB){
+  for (var i = 0; i < arrB.length; i++) {
+    for(var j = arrB.length - 1; j > i; j--){
+      if(arrB[j][0] < arrB[j-1][0]){
+        var t = arrB[j][1];
+        arrB[j][1] = arrB[j-1][1];
+        arrB[j-1][1] = t;    
+
+        var t1 = arrB[j][0];
+        arrB[j][0] = arrB[j-1][0];
+        arrB[j-1][0] = t1;
+      }
+    }
+  }
+}
+
+
+</script>
+</body>
+</html>
