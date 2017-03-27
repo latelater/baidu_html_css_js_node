@@ -1,0 +1,26 @@
+/*task_1_2_5.css*/
+
+.queue-node{
+	background: red;
+	/*height: 100px;*/
+	width: 20px;
+	margin-left: 4px;
+	font-size: 20px;
+	float: left;
+}
+
+queue_text{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+
+queue_text_sort{
+	height: 100px;
+	margin-left: 50px;
+}
+.span_text{
+	margin-left: 50px;
+	float: left;
+
+}
