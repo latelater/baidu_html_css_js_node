@@ -1,0 +1,9 @@
+/*task_1_2_4.css*/
+
+.queue-node{
+	background: red;
+	height: 100px;
+	width: 100px;
+	margin-left: 20px;
+	font-size: 20px;
+}
