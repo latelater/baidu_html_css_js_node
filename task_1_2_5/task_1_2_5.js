@@ -114,7 +114,7 @@
 				break;
 			}
 		}
-		id = 'queue_text_sort';
+		id = 'queue_text';
 		AddSpan(id);
 	}
 
