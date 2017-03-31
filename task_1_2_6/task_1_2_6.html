@@ -1,0 +1,45 @@
+<!-- task_1_2_6.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://og6593g2z.qnssl.com/fundebug.0.0.4.min.js" apikey="4203e62a83da1f97126ddd55d8c60d848a071e24d3f05c90f94010e0e7e9d22c"></script>
+	<link rel="stylesheet" type="text/css" href="task_1_2_6.css">
+	<meta charset="utf-8">
+	<title>百度前端课程javascript第六节</title>
+</head>
+<body>
+<div>
+	<h3>多个输入请以空格隔开：</h3>
+</div>
+<div class="div_input">
+	<textarea id="input_text" data-index="10"></textarea> 
+	<button id="input_left_push" onclick="LeftPush()">左侧入</button>
+	<button id="input_right_push" onclick="RightPush()">右侧入</button>
+	<button id="input_left_pop" style="margin-left: 50px;" onclick="LeftPop()">左侧出</button>
+	<button id="input_right_pop" onclick="RightPop()">右侧出</button>
+</div>
+<hr>
+
+
+<h3>您的输入为：</h3>
+<div id = "queue_text">
+
+</div>
+
+<div>
+	<label>带查询串： <input type="text" name="" id="search_text" placeholder="请输入待查询串"></label>
+	<button id="search_button" onclick="Search()">点击查询</button>
+</div>
+<hr>
+
+
+<h3>查询结果为：</h3>
+<div id="search_result">
+	
+</div>
+<script type="text/javascript" src="task_1_2_6.js"></script>
+
+
+</body>
+</html>
