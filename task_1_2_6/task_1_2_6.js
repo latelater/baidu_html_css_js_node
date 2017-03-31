@@ -149,12 +149,13 @@
 			}
 
 		}
-		var id = "search_result";
-		AddSpan(id, yetarr);
+		if (z != 0) {
+			var id = "search_result";
+			AddSpan(id, yetarr);
+		}
+		else
+			alert("无匹配结果~");
 		yetarr = [""];
 		console.log("一共查询到" + z + "个结果");
 
 	}
-
-
-
